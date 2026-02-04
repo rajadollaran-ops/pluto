@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
               <div className="max-w-7xl mx-auto px-4 flex justify-center">
                 <AdBanner 
                   adId="728x90_banner_navbar"
-                  scriptKey="b726ddc12f7a453bee2b067945c2ad49"
+                  scriptKey="57ecdde0dd3abf21f7d921b1cf731d89"
                   height={90}
                   width={728}
                   className="rounded-lg overflow-hidden shadow-lg"
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
             
             <footer className="w-full max-w-7xl mx-auto px-4 py-8">
               {/* Tempatkan div Native Banner di sini, sebelum Footer */}
-              <div id="container-94f17a22860e4b4d6b99ce8c1e3dbbc3"></div>
+              <div id="container-1ca2cd5e57f936d5abb07f32e2abce9f"></div>
               <Footer />
             </footer>
           </div>
