@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Plugin untuk Next.js di Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirect untuk SPA behavior
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Untuk dynamic routes
+[[redirects]]
+  from = "/movie/:id/*"
+  to = "/movie/:id/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/tv/:id/*"
+  to = "/tv/:id/:splat"
+  status = 200

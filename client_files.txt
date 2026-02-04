@@ -1,0 +1,7 @@
+app\movie\decade\[decade]\page.jsx:"use client";
+app\movie\year\[year]\page.jsx:"use client";
+app\page.jsx:"use client";
+app\people\page.jsx:"use client";
+app\person\[id]\page.jsx:"use client";
+app\rankings\page.jsx:"use client";
+app\search\page.jsx:"use client";

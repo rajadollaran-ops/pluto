@@ -1,0 +1,323 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7fafc;
+  --foreground: #1a202c;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1a202c;
+    --foreground: #f7fafc;
+    --card-bg: #2d3748;
+    --card-border: #4a5568;
+  }
+}
+
+/* Class untuk manual theme switching */
+.dark {
+  --background: #1a202c;
+  --foreground: #f7fafc;
+  --card-bg: #2d3748;
+  --card-border: #4a5568;
+}
+
+.light {
+  --background: #f7fafc;
+  --foreground: #1a202c;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved focus styles for accessibility */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+/* Fallback for non-webkit browsers */
+.line-clamp-1 {
+  max-height: 1.5em;
+}
+
+.line-clamp-2 {
+  max-height: 3em;
+}
+
+.line-clamp-3 {
+  max-height: 4.5em;
+}
+
+/* Additional useful utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.not-sr-only {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+  }
+}
+
+/* Style untuk Native Banner Adsterra */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  margin: 20px 0 !important;
+  padding: 20px !important;
+}
+
+/* Pastikan teks di dalam banner terlihat */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 * {
+  color: white !important;
+  text-decoration: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Style untuk link di dalam banner */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 a {
+  color: #fbbf24 !important;
+  font-weight: bold !important;
+  transition: color 0.3s ease !important;
+}
+
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 a:hover {
+  color: #f59e0b !important;
+  text-decoration: underline !important;
+}
+
+/* Style untuk gambar di banner */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 img {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  transition: transform 0.3s ease !important;
+}
+
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 img:hover {
+  transform: scale(1.02) !important;
+}
+
+/* Style untuk judul */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 h1,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 h2,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 h3,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 h4 {
+  color: #fbbf24 !important;
+  font-weight: bold !important;
+  margin-bottom: 10px !important;
+}
+
+/* Style untuk teks biasa */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 p,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 span,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 div:not([class*="sponsored"]) {
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1.5 !important;
+}
+
+/* Style untuk label sponsored */
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 .sponsored,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 .ad-label,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 .sponsored-label,
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 [class*="sponsored"],
+#container-94f17a22860e4b4d6b99ce8c1e3dbbc3 [class*="ad-"] {
+  background-color: rgba(59, 130, 246, 0.3) !important;
+  color: #93c5fd !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  display: inline-block !important;
+  margin-bottom: 10px !important;
+}
+
+/* ==============================
+   STYLING UNTUK BANNER 728x90
+   ============================== */
+
+/* Container banner */
+.ad-banner-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Placeholder styling */
+.banner-728x90[data-ad-status="loading"] {
+  background: linear-gradient(90deg, #2d3748 25%, #4a5568 50%, #2d3748 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+  border: 1px dashed #4a5568;
+  border-radius: 6px;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-728x90 {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .banner-728x90 {
+    transform: scale(0.8);
+  }
+}
+
+/* Style untuk iframe banner */
+.banner-728x90 iframe {
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+/* Hover effect untuk banner */
+.banner-728x90:hover iframe {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .banner-728x90[data-ad-status="loading"] {
+    background: linear-gradient(90deg, #1a202c 25%, #2d3748 50%, #1a202c 75%);
+    border-color: #2d3748;
+  }
+}
+
+/* Ensure banner doesn't overflow on mobile */
+@media (max-width: 740px) {
+  .banner-728x90 {
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .banner-728x90 iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 90px;
+  }
+}
