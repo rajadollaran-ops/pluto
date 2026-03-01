@@ -40,17 +40,17 @@ export async function generateMetadata({ params }) {
 
   const title = genre?.name || 'Unknown';
   
-  const pageUrl = `https://fmovieswatch.netlify.app/tv-show/genre/${genreName}`;
-  const imageUrl = 'https://live.staticflickr.com/65535/54796154293_fa66ff7825_b.jpg';
+  const pageUrl = `https://watchpluto.netlify.app/tv-show/genre/${genreName}`;
+  const imageUrl = 'https://live.staticflickr.com/65535/55076839917_32aed5ec3d_b.jpg';
 
   return {
-    title: `FMovies - ${title} TV Series`,
-    description: `Find and watch the best ${title} TV series for free on FMovies.`,
+    title: `Pluto Tv - ${title} TV Series`,
+    description: `Find and watch the best ${title} TV series for free on Pluto Tv.`,
     openGraph: {
-      title: `FMovies - ${title} TV Series`,
-      description: `Find and watch the best ${title} TV series for free on FMovies.`,
+      title: `Pluto Tv - ${title} TV Series`,
+      description: `Find and watch the best ${title} TV series for free on Pluto Tv.`,
       url: pageUrl,
-      siteName: 'FMovies',
+      siteName: 'Pluto Tv',
       images: [
         {
           url: imageUrl,
@@ -66,8 +66,8 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       site: '@WatchStream123',
       creator: '@WatchStream123',
-      title: `FMovies - ${title} TV Series`,
-      description: `Find and watch the best ${title} TV series for free on FMovies.`,
+      title: `Pluto Tv - ${title} TV Series`,
+      description: `Find and watch the best ${title} TV series for free on Pluto Tv.`,
       images: [imageUrl],
     },
     other: {

@@ -39,8 +39,8 @@ export async function generateMetadata({ params }) {
   if (CATEGORIES.includes(slug)) {
     const title = slug.replace(/_/g, ' ').toUpperCase();
     return {
-      title: `FMovies - ${title} Movies`,
-      description: `Explore the ${title} movies collection on FMovies.`,
+      title: `Pluto Tv - ${title} Movies`,
+      description: `Explore the ${title} movies collection on Pluto Tv.`,
     };
   }
 
@@ -51,8 +51,8 @@ export async function generateMetadata({ params }) {
     const genres = await getMovieGenres();
     const genreName = genres.find(g => g.id == genreId)?.name || 'Unknown';
     return {
-      title: `FMovies - ${genreName} Movies`,
-      description: `Discover ${genreName} movies on FMovies.`,
+      title: `Pluto Tv - ${genreName} Movies`,
+      description: `Discover ${genreName} movies on Pluto Tv.`,
     };
   }
 
@@ -83,7 +83,7 @@ export async function generateMetadata({ params }) {
   // Jika data tidak ditemukan, kembalikan metadata dasar
   if (!movieData) {
     return {
-      title: 'FMovies',
+      title: 'Pluto Tv',
       description: 'Find your favorite movies to stream.',
     };
   }
@@ -99,13 +99,13 @@ export async function generateMetadata({ params }) {
   const socialImageAlt = `${movieData.title} poster`;
 
   return {
-    title: `FMovies - ${movieData.title}`,
+    title: `Pluto Tv - ${movieData.title}`,
     description: movieData.overview || `Detailed information for movie ${movieData.title}`,
     openGraph: {
       title: movieData.title,
       description: movieData.overview || `Detailed information for movie ${movieData.title}`,
-      url: `https://fmovieswatch.netlify.app/movie/${slug}`,
-      siteName: 'FMovies',
+      url: `https://watchpluto.netlify.app/movie/${slug}`,
+      siteName: 'Pluto Tv',
       images: [
         {
           url: socialImage,
