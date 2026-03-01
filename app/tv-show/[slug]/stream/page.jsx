@@ -89,7 +89,7 @@ export default async function StreamPage({ params }) {
     // Teruskan data yang diambil sebagai props ke komponen klien
     return (
         <WatchClient
-            mediaType="movie"
+            mediaType="tv"
             id={tvDetails.id}
             initialDetails={tvDetails}
             initialSimilarMedia={similarMedia}
